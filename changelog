@@ -1,3 +1,3 @@
-Hot fix per risolvere un problema con le API di RoutineHub che bloccava l'esecuzione corretta dello shortcut
+Migrazione da RoutineHub a GitHub per fixare il problema della risposta troppo lenta alle query per l'auto-update
 
-Hot fix for RoutineHub API being too slow to respond to auto-update query, essentially stopping the shortcut from running smoothly 
+Migration from RoutineHub to GitHub, to fix the earlier hot-fixed problem with RoutineHub's APIs being too slow to reply to auto-update queries
