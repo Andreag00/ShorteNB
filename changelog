@@ -1,3 +1,3 @@
- Aggiunto il supporto al pattern Nokia di Tim. Questa versione introduce anche la possibilità di indicare quali sono gli operatori delle proprie SIM, in modo da poter distinguere tra Tim e WindTre se l'eNB è costituito da 6 numeri.
- 
- Added support for TIM Nokia’s pattern. Also introduced the ability to choose SIMs’ carriers, to be able to decide between WindTre and Tim when the eNB is 6-numbers long.
+Aggiunta la possibilità di salvare i dati decodificati da ShorteNB, georeferenziati, nell'app Note o in iCloud Drive. Riscritta parte del codice per renderlo più snello
+
+Added the possibility to save the data decoded by ShorteNB in a txt file to be saved in iCloud Drive or in an iOS note. Rewrote part of the code to make it more streamlined. 
