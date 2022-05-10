@@ -1,3 +1,3 @@
-Unito le due notifiche mostrate precedentemente in una sola. Aggiunta la capacità di notificare l'utente se c'è un nuovo aggiornamento disponibile.
+Hot fix per risolvere un problema con le API di RoutineHub che bloccava l'esecuzione corretta dello shortcut
 
-Condensed the two notifications into a single one, added the ability to auto-update the shortcut 
+Hot fix for RoutineHub API being too slow to respond to auto-update query, essentially stopping the shortcut from running smoothly 
