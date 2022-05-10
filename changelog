@@ -1,3 +1,3 @@
-Aggiunta la possibilità di salvare i dati decodificati da ShorteNB, georeferenziati, nell'app Note o in iCloud Drive. Riscritta parte del codice per renderlo più snello
+Unito le due notifiche mostrate precedentemente in una sola. Aggiunta la capacità di notificare l'utente se c'è un nuovo aggiornamento disponibile.
 
-Added the possibility to save the data decoded by ShorteNB in a txt file to be saved in iCloud Drive or in an iOS note. Rewrote part of the code to make it more streamlined. 
+Condensed the two notifications into a single one, added the ability to auto-update the shortcut 
