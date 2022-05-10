@@ -1,1 +1,3 @@
- First published version of the shortcut 
+ Aggiunto il supporto al pattern Nokia di Tim. Questa versione introduce anche la possibilità di indicare quali sono gli operatori delle proprie SIM, in modo da poter distinguere tra Tim e WindTre se l'eNB è costituito da 6 numeri.
+ 
+ Added support for TIM Nokia’s pattern. Also introduced the ability to choose SIMs’ carriers, to be able to decide between WindTre and Tim when the eNB is 6-numbers long.
