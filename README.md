@@ -2,9 +2,6 @@
 
 A shortcut by @andreag00 on [Telegram](https://t.me/andreag00)/ag23900 on [Fibra Click](https://forum.fibra.click/u/ag23900)
 
-![Repo Last Update Badge](https://badges.pufler.dev/updated/Andreag00/ShorteNB)
-![Visits Badge](https://badges.pufler.dev/visits/Andreag00/Andreag00/?color=orange)
-
 ## Versione Italiana
 Decodifica facilmente i dati dal CellID che si trova nel FieldTest di Apple (FTMInternal-4). **Supporta solo MNO italiani**
 
