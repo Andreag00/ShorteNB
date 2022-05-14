@@ -23,7 +23,7 @@ La prima domanda richiede l'inserimento dell'MNC (Mobile Network Code) dell'oper
 - 50 per iliad
 - 88 per WindTre.
 
-![Screenshot della prima domanda per il setup](https://raw.githubusercontent.com/Andreag00/ShorteNB/main/README-Images/Setup_1.png)
+![Screenshot della prima domanda per il setup](https://raw.githubusercontent.com/Andreag00/ShorteNB/main/README-Images/Setup_1_IT.png)
 
 La seconda domanda, invece, richiede l'inserimento dell'MNC dell'operatore di un eventuale seconda SIM. I valori attesi sono:
 - 0 per nessuna seconda SIM;
@@ -32,7 +32,7 @@ La seconda domanda, invece, richiede l'inserimento dell'MNC dell'operatore di un
 - 50 per iliad;
 - 88 per WindTre.
 
-![Screenshot della seconda domanda per il setup](https://raw.githubusercontent.com/Andreag00/ShorteNB/main/README-Images/Setup_2.png)
+![Screenshot della seconda domanda per il setup](https://raw.githubusercontent.com/Andreag00/ShorteNB/main/README-Images/Setup_2_IT.png)
 
 **WARNING:** Perché lo shortcut funzioni correttamente con il RAN Sharing di iliad su WindTre, è necessario impostare o MNC1 o MNC2 come se si avesse una SIM WindTre (88), altrimenti non verranno mostrate le bande a cui si è connessi quando si finisce sulla rete WindTre.
 **WARNING:** La combinazione di operatori Tim+WindTre non è supportata in quanto entrambi usano eNB a 6 cifre e lo shortcut non può distinguere tra i due operatori.
@@ -42,9 +42,9 @@ La terza e ultima domanda è necessaria per decidere se e come l'utente vuole ch
 - 1 per salvare i dati in una nota nell'app Note;
 - 2 per salvare i dati in un file .txt in una nuova cartella su iCloud Drive (consigliato).
 
-![Screenshot della terza domanda per il setup](https://raw.githubusercontent.com/Andreag00/ShorteNB/main/README-Images/Setup_3.png)
+![Screenshot della terza domanda per il setup](https://raw.githubusercontent.com/Andreag00/ShorteNB/main/README-Images/Setup_3_IT.png)
 
-![Esempio di file generati con l'opzione 2](https://raw.githubusercontent.com/Andreag00/ShorteNB/main/README-Images/iCloud_Drive.png)
+![Esempio di file generati con l'opzione 2](https://raw.githubusercontent.com/Andreag00/ShorteNB/main/README-Images/iCloud_Drive_IT.png)
 
 *NOTA:* Se si sceglie di salvare i dati georeferenziati nell'app Note (opzione 1), al primo utilizzo ShorteNB deve essere eseguito due volte, in quanto la prima esecuzione creerà la nota, mentre la seconda inizierà a scrivere i dati. Questo passaggio non è necessario se si sceglie l'opzione 2.
 
@@ -69,7 +69,7 @@ It will first prompt to insert the MNC (Mobile Network Code) associated to your 
 - 50 for iliad
 - 88 for WindTre.
 
-![Screenshot of the first setup question](https://raw.githubusercontent.com/Andreag00/ShorteNB/main/README-Images/Setup_1.png)
+![Screenshot of the first setup question](https://raw.githubusercontent.com/Andreag00/ShorteNB/main/README-Images/Setup_1_EN.png)
 
 The second prompt will ask the user to insert the MNC of the associated to an eventual second SIM. Expected values are:
 - 0 for no second SIM;
@@ -78,7 +78,7 @@ The second prompt will ask the user to insert the MNC of the associated to an ev
 - 50 for iliad;
 - 88 for WindTre.
 
-![Screenshot of the second setup question](https://raw.githubusercontent.com/Andreag00/ShorteNB/main/README-Images/Setup_2.png)
+![Screenshot of the second setup question](https://raw.githubusercontent.com/Andreag00/ShorteNB/main/README-Images/Setup_2_EN.png)
 
 **WARNING:** For the shortcut to work with Iliad’s RAN Sharing on WindTre, either MNC1 or MNC2 needs to be set as 88, and the other as 50. Otherwise the shortcut will not show what band you’re connected to when you’re on WindTre’s Radio Access Network.
 **WARNING:** The MNC combo 1+88 is not supported, as both Tim and WindTre use 6-characters eNBs and the Shortcut would not be able to distinguish which operator an eNB belongs to.
@@ -88,8 +88,8 @@ The third, and last prompt, is needed to decide if and how the user wants the de
 - 1 for data to be saved in a note in the Notes app;
 - 2 for data to be saved in a .txt file in a newly created folder in iCloud Drive (recommended).
 
-![Screenshot of the third setup question](https://raw.githubusercontent.com/Andreag00/ShorteNB/main/README-Images/Setup_3.png)
+![Screenshot of the third setup question](https://raw.githubusercontent.com/Andreag00/ShorteNB/main/README-Images/Setup_3_EN.png)
 
-![Screenshot of example files created if option 2 is chosen](https://raw.githubusercontent.com/Andreag00/ShorteNB/main/README-Images/iCloud_Drive.png)
+![Screenshot of example files created if option 2 is chosen](https://raw.githubusercontent.com/Andreag00/ShorteNB/main/README-Images/iCloud_Drive_EN.png)
 
 *NOTE:* If the user wants data to be saved in the Notes app (option 1), the shortcuts needs to be run twice for the first time, as the first run will create the note and the second one will start writing data. 
