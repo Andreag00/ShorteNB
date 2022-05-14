@@ -1,3 +1,3 @@
-Migrazione da RoutineHub a GitHub per fixare il problema della risposta troppo lenta alle query per l'auto-update. Corretto errore nel versioning.
+Modificato il modo in cui lo shortcut gestisce i secondi nodi WindTre, facendo in modo che in caso di collegamento a un nodo secondario venga comunque aperta la pagina LTE Italy del nodo principale, in modo da mostrare foto più recenti e informazioni più complete
 
-Migration from RoutineHub to GitHub, to fix the earlier hot-fixed problem with RoutineHub's APIs being too slow to reply to auto-update queries. Corrected versioning error
+Modified the way the shortcut handles WindTre's secondary nodes. Now, even when the user is connected to a secondary eNB, LTE Italy's page for the primary node will be opened to show more updated images and more complete info
