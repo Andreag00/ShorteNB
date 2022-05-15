@@ -1,0 +1,31 @@
+import Shortcuts
+#Color: red, #Icon: wifi 
+
+
+dictionary(json: {"CV":"0.4.2"})
+
+var Q1, Q2, Q3
+
+number(value: 10) >> Q1
+number(value: 88) >> Q2
+number(value: 2) >> Q3
+
+var MNC1 = Q1
+var MNC2 = Q2
+var DB = Q3
+getClipboard() >> clipboard
+var CellID = clipboard
+
+math(input: CellID, operation: ÷, operand: "256", scientific: ...) >> math1
+var eNB = math1
+
+round(number: ${eNB}, roundTo: Ones Place, mode: Normal) >> math2
+var eNBR = math2
+
+math(input: eNB, operation: -, operand: eNBR, scientific: ...) >> math3
+math(input: math3, operation: ×, operand: "256", scientific: ...) >> math4
+var CID = math4
+
+if ("${eNBR}" .between 11...19) {
+    sendNotification(body: hello, title: hello, sound: ..., attachment: ...)
+}
