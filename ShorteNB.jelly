@@ -1,7 +1,6 @@
 import Shortcuts
 #Color: red, #Icon: wifi 
 
-
 dictionary(json: {"CV":"0.4.2"})
 
 var Q1, Q2, Q3
@@ -21,11 +20,74 @@ var eNB = math1
 
 round(number: ${eNB}, roundTo: Ones Place, mode: Normal) >> math2
 var eNBR = math2
+var ActeNB = math2
 
 math(input: eNB, operation: -, operand: eNBR, scientific: ...) >> math3
 math(input: math3, operation: ×, operand: "256", scientific: ...) >> math4
 var CID = math4
 
-if ("${eNBR}" .between 11...19) {
-    sendNotification(body: hello, title: hello, sound: ..., attachment: ...)
+if (${eNBR} .between 10000...99999) {
+    if(${CID} .between 11...19) {
+        var BN = 20
+    } else {
+        if(${CID} .between 31...39) {
+            var BN = 3
+        } else {
+            if(${CID} .between 41...49) {
+                var BN = 1
+            } else {
+                if(${CID} .between 51...59) {
+                    var BN = 7
+                } else {
+                    if(${CID} .between 91...99) {
+                        var BN = 8
+                    }
+                }    
+            }
+        }
+    }    
+} else {
+    if (${eNBR} .between 100000...999999) {
+        if(MNC1 == 88) {
+            math(input: eNBC, operation: ÷, operand: "1000", scientific: ...) >> RedeNBC
+            var pCode = RedeNBC
+            round(number: ${pCode}, roundTo: Ones Place, mode: Always Round Down) >> Round1
+            math(input: Round1, operation: ÷, operand: "2", scientific: ...) >> pCode2
+            round(number: ${pCode2}, roundTo: Ones Place, mode: Always Round Down) >> RpCode2
+            math(input: pCode2, operation: -, operand: "0,5", scientific: ...) Diff1
+            if(${eNBR} >= 502000) {
+                math(input: eNBR, operation: -, operand: "400000", scientific: ...) >> CorreNB
+                var eNBC = CorreNB
+                if(RpCode2 == Diff1) {
+                    math(input: eNBC, operation: -, operand: "1000", scientific: ...) >> RedeNBC
+                    var eNBR = RedeNBC
+                }
+
+            }
+            if(${CID} .between 0...5) {
+                var BN = 3
+            } else {
+                if(${CID} .between 6...11) {
+                    var BN = 20
+                } else {
+                    if(${CID} .between 12...17) {
+                        var BN = 7
+                    } else {
+                        if(${CID} .between 18...23) {
+                            var BN = 1
+                        } else {
+                            if(${CID} .between 24...29) {
+                                var BN = 38
+                            }
+                        }
+                    }
+                }
+            }
+        } else {
+            if(${MNC2} == 88) {
+
+            }
+        }
+    }    
 }
+
