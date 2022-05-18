@@ -1,7 +1,7 @@
 import Shortcuts
 #Color: red, #Icon: wifi 
 
-dictionary(json: {"CV":"0.4.2"})
+dictionary(json: {"CV":"0.5"})
 
 var Q1, Q2, Q3
 
@@ -18,7 +18,7 @@ var CellID = clipboard
 math(input: CellID, operation: ÷, operand: "256", scientific: ...) >> math1
 var eNB = math1
 
-round(number: ${eNB}, roundTo: Ones Place, mode: Normal) >> math2
+round(number: eNB, roundTo: Ones Place, mode: Normal) >> math2
 var eNBR = math2
 var ActeNB = math2
 
@@ -26,28 +26,33 @@ math(input: eNB, operation: -, operand: eNBR, scientific: ...) >> math3
 math(input: math3, operation: ×, operand: "256", scientific: ...) >> math4
 var CID = math4
 
-if (${eNBR} .between 10000...99999) {
-    if(${CID} .between 11...19) {
-        var BN = 20
+if (eNBR.between 10000...99999) {
+    if(CID.between 11...19) {
+        number(value: 20) >> B20VF
+        var BN = B20VF
     } else {
-        if(${CID} .between 31...39) {
-            var BN = 3
+        if(CID.between 31...39) {
+            number(value: 3) >> B3VF
+            var BN = B3VF
         } else {
-            if(${CID} .between 41...49) {
-                var BN = 1
+            if(CID.between 41...49) {
+                number(value: 1) >> B1VF
+                var BN = B1VF
             } else {
-                if(${CID} .between 51...59) {
-                    var BN = 7
+                if(CID.between 51...59) {
+                    number(value: 7) >> B7VF
+                    var BN = B7VF
                 } else {
-                    if(${CID} .between 91...99) {
-                        var BN = 8
+                    if(CID.between 91...99) {
+                        number(value: 8) >> B8VF
+                        var BN = B8VF
                     }
                 }    
             }
         }
     }    
 } else {
-    if (${eNBR} .between 100000...999999) {
+    if (eNBR.between 100000...999999) {
         if(MNC1 == 88) {
             math(input: eNBC, operation: ÷, operand: "1000", scientific: ...) >> RedeNBC
             var pCode = RedeNBC
@@ -55,37 +60,78 @@ if (${eNBR} .between 10000...99999) {
             math(input: Round1, operation: ÷, operand: "2", scientific: ...) >> pCode2
             round(number: ${pCode2}, roundTo: Ones Place, mode: Always Round Down) >> RpCode2
             math(input: pCode2, operation: -, operand: "0,5", scientific: ...) Diff1
-            if(${eNBR} >= 502000) {
+            if(eNBR >= 502000) {
                 math(input: eNBR, operation: -, operand: "400000", scientific: ...) >> CorreNB
                 var eNBC = CorreNB
-                if(RpCode2 == Diff1) {
-                    math(input: eNBC, operation: -, operand: "1000", scientific: ...) >> RedeNBC
-                    var eNBR = RedeNBC
-                }
-
             }
-            if(${CID} .between 0...5) {
-                var BN = 3
+            if(RpCode2 == Diff1) {
+                math(input: eNBC, operation: -, operand: "1000", scientific: ...) >> RedeNBC
+                var eNBR = RedeNBC
+            }
+            if(CID.between 0...5) {
+                number(value: 3) >> B3W1
+                var BN = B3W1
             } else {
-                if(${CID} .between 6...11) {
-                    var BN = 20
+                if(CID.between 6...11) {
+                    number(value: 20) >> B20W1
+                    var BN = B20W1
                 } else {
-                    if(${CID} .between 12...17) {
-                        var BN = 7
+                    if(CID.between 12...17) {
+                        number(value: 7) >> B7W1
+                        var BN = B7W1
                     } else {
-                        if(${CID} .between 18...23) {
-                            var BN = 1
+                        if(CID.between 18...23) {
+                           number(value: 1) >> B1W1
+                            var BN = B1W1
                         } else {
-                            if(${CID} .between 24...29) {
-                                var BN = 38
+                            if(CID.between 24...29) {
+                                number(value: 38) >> B38W1
+                                var BN = B38W1
                             }
                         }
                     }
                 }
             }
-        } else {
-            if(${MNC2} == 88) {
-
+        } else {           
+            if(MNC2 == 88) {
+                math(input: eNBC, operation: ÷, operand: 1000, scientific: ...) >> RedeNBC
+                var pCode = RedeNBC
+                round(number: ${pCode}, roundTo: Ones Place, mode: Always Round Down) >> Round1    
+                math(input: Round1, operation: ÷, operand: "2", scientific: ...) >> pCode2
+                round(number: ${pCode2}, roundTo: Ones Place, mode: Always Round Down) >> RpCode2
+                math(input: pCode2, operation: -, operand: "0,5", scientific: ...) Diff1
+                if(${eNBR} >= 502000) {
+                    math(input: eNBR, operation: -, operand: "400000", scientific: ...) >> CorreNB
+                    var eNBC = CorreNB
+                }
+                if(RpCode2 == Diff1) {
+                    math(input: eNBC, operation: -, operand: "1000", scientific: ...) >> RedeNBC
+                    var eNBR = RedeNBC
+                }
+                if(CID.between 0...5) {
+                    number(value: 3) >> B3W2
+                    var BN = B3W2
+                } else {
+                    if(CID.between 6...11) {
+                        number(value: 20) >> B20W2
+                        var BN = B20W2
+                    } else {
+                        if(CID.between 12...17) {
+                            number(value: 7) >> B7W2
+                            var BN = B7W2
+                        } else {
+                            if(CID.between 18...23) {
+                                number(value: 1) >> B1W2
+                                var BN = B1W2
+                            } else {
+                                if(CID.between 24...29) {
+                                    number(value: 38) >> B38W2
+                                    var BN = B38W2
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }    
