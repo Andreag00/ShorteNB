@@ -87,7 +87,7 @@ When imported, the shortcut will prompt you to input some data required for it t
 
 It will first ask to insert the user's LTE Italy username and password:
 
-![Screenshot of the first setup prompt](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/User_Pass_IT.png)
+![Screenshot of the first setup prompt](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/User_Pass_EN.png)
 
 **DISCLAIMER: The safety of the user's username and password may be compromised because they're saved unencrypted in the Shortcuts app. Credentials will never leave the user's device, the user is responsible for the safety of these credentials. This shortcut is not in any way affiliated with LTE Italy.**
 
