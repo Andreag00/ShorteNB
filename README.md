@@ -13,6 +13,10 @@ L'ideale è usarlo in concomitanza con [questo shortcut](https://github.com/Andr
 
 ### Come importare in Shortcuts
 
+#### Prerequisiti
+
+Perché ShorteNB funzioni è necessario installare Scriptable.
+
 Per importare lo shortcut è sufficiente scaricare e aprire il file .shortcut, oppure aprire il link iCloud presente nel file "link".
 
 ### Come effettuare il primo setup di ShorteNB
@@ -64,6 +68,10 @@ Works great in conjunction with [this shortcut](https://github.com/Andreag00/FTM
 To import the shortcut, simply download the .shortcut file or open the link in the "link" file.
 
 ### How to setup the shortcut
+
+#### Prerequisites
+
+For ShorteNB to work, Scriptable is required.
 
 When imported, the shortcut will prompt you to input some data required for it to work properly.
 
