@@ -11,7 +11,7 @@ Decodifica facilmente i dati dal CellID che si trova nel FieldTest di Apple (FTM
 
 ![Esempio di notifica generata da ShorteNB](https://raw.githubusercontent.com/Andreag00/ShorteNB/main/README-Images/Example_Notification.png)
 
-Lo shortcut va eseguito dopo aver copiato il CellID dal FieldTest e decodifica eNB, CID e banda (se disponibile) dal CellID. Oltre a decodificare questi dati, esce un prompt per aprire velocemente la pagina con le info sulla BTS o la mappa centrata sulla posizione dell'utente su [LTE Italy](https://lteitaly.it) e salva i dati decodificati, georeferenziati, in una nota nell'app Note o in un file .txt su iCloud Drive. Inoltre nella notifica vengono mostrati dei dati aggiuntivi: nome, bande 4G e 5G e info sui tipi di 5G attivi della BTS a cui l'utente è collegato.unieuro
+Lo shortcut va eseguito dopo aver copiato il CellID dal FieldTest e decodifica eNB, CID e banda (se disponibile) dal CellID. Oltre a decodificare questi dati, esce un prompt per aprire velocemente la pagina con le info sulla BTS o la mappa centrata sulla posizione dell'utente su [LTE Italy](https://lteitaly.it) e salva i dati decodificati, georeferenziati, in una nota nell'app Note o in un file .txt su iCloud Drive. Inoltre nella notifica vengono mostrati dei dati aggiuntivi: nome, bande 4G e 5G e info sui tipi di 5G attivi della BTS a cui l'utente è collegato.
 
 L'ideale è usarlo in concomitanza con [questo shortcut](https://github.com/Andreag00/FTM-Opener), che apre il FieldTest **se aggiunto alla Home Screen**.
 
