@@ -2,7 +2,7 @@
 
 A shortcut by @andreag00 on [Telegram](https://t.me/andreag00)/ag23900 on [Fibra Click](https://forum.fibra.click/u/ag23900)
 
-Big thanks to [Simone](https://t.me/simonebortolin) and [Abdel](https://t.me/hiimabdel) for help with JavaScript.
+Big thanks to [Abdel](https://github.com/ADeltaX) and [Simone](https://github.com/SimoneBortolin) for help with JavaScript.
 
 Join the [Telegram group](https://t.me/ShorteNB)!
 
