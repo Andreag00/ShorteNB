@@ -1,6 +1,7 @@
 # ShorteNB 
 
 A shortcut by @andreag00 on [Telegram](https://t.me/andreag00)/ag23900 on [Fibra Click](https://forum.fibra.click/u/ag23900)
+
 Big thanks to [Simone](https://t.me/simonebortolin) and [Abdel](https://t.me/hiimabdel) for help with JavaScript.
 ## Versione Italiana
 Decodifica facilmente i dati dal CellID che si trova nel FieldTest di Apple (FTMInternal-4). **Supporta solo MNO italiani**
