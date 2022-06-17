@@ -1,3 +1,3 @@
-Cambiato il setup iniziale dello shortcut, che ora salva i dati in un json, in modo da non dover inserire nuovamente le proprie impostazioni a ogni aggiornamento.
+Aggiunta la possibilità di indicare di non avere una seconda SIM, aggiunto un controllo sulla validità del CellID per evitare gli errori criptici di Scriptable.
 
 DISCLAIMER: questa versione è una beta e potrebbe presentare bug oltre a non essere completa.
