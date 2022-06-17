@@ -1,5 +1,5 @@
-let user = "Dictionary (username)";
-let password = "Dictionary (password)";
+let user = "username";
+let password = "password";
 let cookies = "";
 let req = new Request("https://lteitaly.it/api/AV1.php");
 req.method = "POST";

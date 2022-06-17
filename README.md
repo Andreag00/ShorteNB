@@ -19,50 +19,41 @@ L'ideale è usarlo in concomitanza con [questo shortcut](https://github.com/Andr
 
 #### Prerequisiti
 
-**Perché ShorteNB funzioni è necessario installare [Scriptable](https://apps.apple.com/it/app/scriptable/id1405459188?l=en).**
+**Perché ShorteNB funzioni è necessario installare [Scriptable](https://apps.apple.com/it/app/scriptable/id1405459188).**
 
 Per importare lo shortcut è sufficiente scaricare e aprire il file .shortcut, oppure aprire il link iCloud presente nel file "link".
 
 ### Come effettuare il primo setup di ShorteNB
 
-In concomitanza all'import dello shortcut, ShorteNB richiede l'impostazione di vari valori per funzionare correttamente.
+In concomitanza all'import dello shortcut, ShorteNB richiede l'impostazione di alcuni valori per funzionare correttamente.
 
-La prima domanda richiede l'inserimento di username e password del proprio account di LTE Italy per permettere di mostrare i dati aggiuntivi ottenuti dalle API di LTE Italy:
+I primi due prompt richiedono l'inserimento di username e password del proprio account di LTE Italy per permettere di mostrare i dati aggiuntivi ottenuti dalle API di LTE Italy:
 
-![Screenshot della domanda che richiede l'inserimento delle credenziali](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/User_Pass_IT.png)
+![Inserimento username](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/Username.png)
+![Inserimento password](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/Password.png)
 
 **DISCLAIMER: La sicurezza della propria password potrebbe essere compromessa in quanto viene salvata in chiaro all'interno dell'app Shortcuts. Le credenziali non lasceranno mai il dispositivo dell'utente, che si prende la responsabilità di mantenere sicure le proprie credenziali. Inoltre questo Shortcut non è in alcun modo affiliato a LTE Italy.**
 
-La seconda domanda richiede l'inserimento dell'MNC (Mobile Network Code) dell'operatore della prima SIM. I valori attesi sono:
-- 1 per TIM (Telecom Italia);
-- 10 per Vodafone;
-- 50 per iliad
-- 88 per WindTre.
+Il terzo prompt permette di scegliere l'operatore della SIM principale dell'utente:
 
-![Screenshot della seconda domanda per il setup](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/Setup_1_IT.png)
+![Scelta operatore SIM principale](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/MNC1.png)
 
-La terza domanda, invece, richiede l'inserimento dell'MNC dell'operatore di un eventuale seconda SIM. I valori attesi sono:
-- 0 per nessuna seconda SIM;
-- 1 per TIM (Telecom Italia);
-- 10 per Vodafone;
-- 50 per iliad;
-- 88 per WindTre.
+Il quarto prompt, molto similmente al secondo, permette di scegliere l'operatore della SIM secondaria dell'utente:
 
-![Screenshot della terza domanda per il setup](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/Setup_2_IT.png)
+![Screenshot della terza domanda per il setup](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/MNC2.png)
 
-**WARNING:** Perché lo shortcut funzioni correttamente con il RAN Sharing di iliad su WindTre, è necessario impostare o MNC1 o MNC2 come se si avesse una SIM WindTre (88), altrimenti non verranno mostrate le bande a cui si è connessi quando si finisce sulla rete WindTre.
-**WARNING:** La combinazione di operatori Tim+WindTre non è supportata in quanto entrambi usano eNB a 6 cifre e lo shortcut non può distinguere tra i due operatori.
+**WARNING:** Se l'utente sceglie iliad come operatore della SIM principale, l'operatore della SIM secondaria viene automaticamente impostato come WindTre, in modo che lo shortcut funzioni correttamente con il RAN Sharing su WindTre. 
+**WARNING:** La combinazione di operatori Tim+WindTre non è supportata in quanto entrambi usano eNB a 6 cifre e lo shortcut non può distinguere tra i due operatori, questa incompatibilità si riflette sul menu della scelta dell'operatore della SIM secondaria, che non permette di effettuare questa scelta.
 
-La quarta e ultima domanda è necessaria per decidere se e come l'utente vuole che i dati georeferenziati vengano salvati. I valori attesi sono:
-- 0 per non salvare alcun dato;
-- 1 per salvare i dati in una nota nell'app Note;
-- 2 per salvare i dati in un file .txt in una nuova cartella su iCloud Drive (consigliato).
+Il quinto, e ultimo, prompt permette di scegliere se e come l'utente vuole che i dati che ShorteNB processa vengano salvati:
 
-![Screenshot della quarta domanda per il setup](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/Setup_3_IT.png)
+![Scelta metodo di salvataggio](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/DB.png)
 
-![Esempio di file generati con l'opzione 2](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/iCloud_Drive_IT.png)
+![Esempio di file generati con l'opzione 2](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/iCloud_Drive.png)
 
 *NOTA:* Se si sceglie di salvare i dati georeferenziati nell'app Note (opzione 1), al primo utilizzo ShorteNB deve essere eseguito due volte, in quanto la prima esecuzione creerà la nota, mentre la seconda inizierà a scrivere i dati. Questo passaggio non è necessario se si sceglie l'opzione 2.
+
+Dopo il primo setup, anche in caso di aggiornamento, non ci sarà bisogno di reinserire queste scelte, in quanto vengono salvate su iCloud Drive e non vengono più modificate dopo il primo setup. In caso si volessero cambiare queste scelte è necessario cancellare il file "settings.json" nella cartella di ShorteNB presente su iCloud Drive.
 
 ## English Version
 Easily decode data out of the CellID found in Apple's FTMInternal-4 together with extra data gathered from LTE Italy'APIs. **Italian MNOs only**
@@ -87,37 +78,26 @@ When imported, the shortcut will prompt you to input some data required for it t
 
 It will first ask to insert the user's LTE Italy username and password:
 
-![Screenshot of the first setup prompt](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/User_Pass_EN.png)
+![Username prompt](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/Username.png)
+![Password prompt](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/Password.png)
 
 **DISCLAIMER: The safety of the user's username and password may be compromised because they're saved unencrypted in the Shortcuts app. Credentials will never leave the user's device, the user is responsible for the safety of these credentials. This shortcut is not in any way affiliated with LTE Italy.**
 
-It will first prompt to insert the MNC (Mobile Network Code) associated to your first SIM. Expected values are:
-- 1 for TIM (Telecom Italia);
-- 10 for Vodafone;
-- 50 for iliad
-- 88 for WindTre.
+The third prompt is used to choose the user's main SIM's operator:
 
-![Screenshot of the second setup prompt](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/Setup_1_EN.png)
+![Main SIM prompt](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/MNC1.png)
 
-The second prompt will ask the user to insert the MNC of the associated to an eventual second SIM. Expected values are:
-- 0 for no second SIM;
-- 1 for TIM (Telecom Italia);
-- 10 for Vodafone;
-- 50 for iliad;
-- 88 for WindTre.
+The fourth prompt, similarly to the previous one, is used to choose the user's secondary SIM's operator:
 
-![Screenshot of the third setup prompt](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/Setup_2_EN.png)
+![Secondary SIM prompt](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/MNC2.png)
 
-**WARNING:** For the shortcut to work with Iliad’s RAN Sharing on WindTre, either MNC1 or MNC2 needs to be set as 88, and the other as 50. Otherwise the shortcut will not show what band you’re connected to when you’re on WindTre’s Radio Access Network.
-**WARNING:** The MNC combo 1+88 is not supported, as both Tim and WindTre use 6-characters eNBs and the Shortcut would not be able to distinguish which operator an eNB belongs to.
+**WARNING:** If iliad is chosen as the main SIM's operator, the shortcut will automatically set the secondary SIM's operator as WindTre to show correct info when the user is connected to WindTre's Radio Access Network via RAN sharing.
+**WARNING:** As having Tim and WindTre as operators is not supported (because both user 6-number eNBs and there is no way to distinguish them), if either of them is chosen as the main SIM's operator, the prompt for the secondary SIM will not allow the user to choose the other one.
 
-The third, and last prompt, is needed to decide if and how the user wants the decoded data to be saved. Expected values are: 
-- 0 for no data to be saved;
-- 1 for data to be saved in a note in the Notes app;
-- 2 for data to be saved in a .txt file in a newly created folder in iCloud Drive (recommended).
+The fifth, and last, prompt is to choose if and how the user wants the decoded data to be saved:
 
-![Screenshot of the fourth setup prompt](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/Setup_3_EN.png)
+![Data saving prompt](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/DB.png)
 
-![Screenshot of example files created if option 2 is chosen](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/iCloud_Drive_EN.png)
+![Screenshot of example files created if option 2 is chosen](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/iCloud_Drive.png)
 
 *NOTE:* If the user wants data to be saved in the Notes app (option 1), the shortcuts needs to be run twice for the first time, as the first run will create the note and the second one will start writing data. 
