@@ -1,3 +1,3 @@
-Aggiunta la possibilità di indicare di non avere una seconda SIM, aggiunto un controllo sulla validità del CellID per evitare gli errori criptici di Scriptable.
+Riscritta la logica per calcolare CID, eNB e banda in JavaScript.
 
 DISCLAIMER: questa versione è una beta e potrebbe presentare bug oltre a non essere completa.
