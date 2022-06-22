@@ -1,10 +1,10 @@
 # ShorteNB 
 
+**Join the [Telegram group](https://t.me/ShorteNB)!**
+
 A shortcut by @andreag00 on [Telegram](https://t.me/andreag00)/ag23900 on [Fibra Click](https://forum.fibra.click/u/ag23900)
 
-Big thanks to [Abdel](https://github.com/ADeltaX) and [Simone](https://github.com/SimoneBortolin) for help with JavaScript.
-
-Join the [Telegram group](https://t.me/ShorteNB)!
+Big thanks to [Abdel](https://github.com/ADeltaX) and [Simone](https://github.com/SimoneBortolin) for help with JavaScript, Marco for creating all the logos in the appropriate dimensions.
 
 ## Versione Italiana
 Decodifica facilmente i dati dal CellID che si trova nel FieldTest di Apple (FTMInternal-4) mostrando anche dati sulla BTS a cui si è connessi presi da LTE Italy. **Supporta solo MNO italiani**
@@ -25,22 +25,26 @@ Per importare lo shortcut è sufficiente scaricare e aprire il file .shortcut, o
 
 ### Come effettuare il primo setup di ShorteNB
 
-In concomitanza all'import dello shortcut, ShorteNB richiede l'impostazione di alcuni valori per funzionare correttamente.
+In concomitanza alla prima esecuzione dello shortcut, ShorteNB richiede l'impostazione di alcuni valori per funzionare correttamente.
 
-I primi due prompt richiedono l'inserimento di username e password del proprio account di LTE Italy per permettere di mostrare i dati aggiuntivi ottenuti dalle API di LTE Italy:
+Innanzitutto, ShorteNB chiede se Scriptable è stata installata, in quanto è un'app essenziale perché lo shortcut possa funzionare:
+
+![Scriptable](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/Scriptable.png)
+
+I due prompt successivi richiedono l'inserimento di username e password del proprio account di LTE Italy per permettere di mostrare i dati aggiuntivi ottenuti dalle API di LTE Italy:
 
 ![Inserimento username](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/Username.png)
 ![Inserimento password](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/Password.png)
 
 **DISCLAIMER: La sicurezza della propria password potrebbe essere compromessa in quanto viene salvata in chiaro all'interno dell'app Shortcuts. Le credenziali non lasceranno mai il dispositivo dell'utente, che si prende la responsabilità di mantenere sicure le proprie credenziali. Inoltre questo Shortcut non è in alcun modo affiliato a LTE Italy.**
 
-Il terzo prompt permette di scegliere l'operatore della SIM principale dell'utente:
+Il prompt successivo permette di scegliere l'operatore della SIM principale dell'utente:
 
 ![Scelta operatore SIM principale](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/MNC1.png)
 
-Il quarto prompt, molto similmente al secondo, permette di scegliere l'operatore della SIM secondaria dell'utente:
+Il quinto prompt, molto similmente al precedente, permette di scegliere l'operatore della SIM secondaria dell'utente:
 
-![Screenshot della terza domanda per il setup](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/MNC2.png)
+![Scelta operatore SIM secondaria](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/MNC2.png)
 
 **WARNING:** Se l'utente sceglie iliad come operatore della SIM principale, l'operatore della SIM secondaria viene automaticamente impostato come WindTre, in modo che lo shortcut funzioni correttamente con il RAN Sharing su WindTre. 
 **WARNING:** La combinazione di operatori Tim+WindTre non è supportata in quanto entrambi usano eNB a 6 cifre e lo shortcut non può distinguere tra i due operatori, questa incompatibilità si riflette sul menu della scelta dell'operatore della SIM secondaria, che non permette di effettuare questa scelta.
@@ -49,9 +53,7 @@ Il quinto, e ultimo, prompt permette di scegliere se e come l'utente vuole che i
 
 ![Scelta metodo di salvataggio](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/DB.png)
 
-![Esempio di file generati con l'opzione 2](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/iCloud_Drive.png)
-
-*NOTA:* Se si sceglie di salvare i dati georeferenziati nell'app Note (opzione 1), al primo utilizzo ShorteNB deve essere eseguito due volte, in quanto la prima esecuzione creerà la nota, mentre la seconda inizierà a scrivere i dati. Questo passaggio non è necessario se si sceglie l'opzione 2.
+![Esempio di file generati nella cartella 'ShorteNB' su iCloud Drive](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/iCloud_Drive.png)
 
 Dopo il primo setup, anche in caso di aggiornamento, non ci sarà bisogno di reinserire queste scelte, in quanto vengono salvate su iCloud Drive e non vengono più modificate dopo il primo setup. In caso si volessero cambiare queste scelte è necessario cancellare il file "settings.json" nella cartella di ShorteNB presente su iCloud Drive.
 
@@ -74,30 +76,32 @@ To import the shortcut, simply download the .shortcut file or open the link in t
 
 ### How to setup the shortcut
 
-When imported, the shortcut will prompt you to input some data required for it to work properly.
+When executed for the very first time, the shortcut will prompt the user to input some data required for it to work properly.
 
-It will first ask to insert the user's LTE Italy username and password:
+First of all, ShorteNB will ask if Scriptable has been installed, as it's a required app for the shortcut to work at all:
+
+![Scriptable](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/Scriptable.png)
+
+It will then ask to insert the user's LTE Italy username and password:
 
 ![Username prompt](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/Username.png)
 ![Password prompt](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/Password.png)
 
 **DISCLAIMER: The safety of the user's username and password may be compromised because they're saved unencrypted in the Shortcuts app. Credentials will never leave the user's device, the user is responsible for the safety of these credentials. This shortcut is not in any way affiliated with LTE Italy.**
 
-The third prompt is used to choose the user's main SIM's operator:
+The next prompt asks the user to choose their main SIM's operator:
 
 ![Main SIM prompt](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/MNC1.png)
 
-The fourth prompt, similarly to the previous one, is used to choose the user's secondary SIM's operator:
+The fifth prompt, similarly to the previous one, is used to choose the user's secondary SIM's operator:
 
 ![Secondary SIM prompt](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/MNC2.png)
 
 **WARNING:** If iliad is chosen as the main SIM's operator, the shortcut will automatically set the secondary SIM's operator as WindTre to show correct info when the user is connected to WindTre's Radio Access Network via RAN sharing.
 **WARNING:** As having Tim and WindTre as operators is not supported (because both user 6-number eNBs and there is no way to distinguish them), if either of them is chosen as the main SIM's operator, the prompt for the secondary SIM will not allow the user to choose the other one.
 
-The fifth, and last, prompt is to choose if and how the user wants the decoded data to be saved:
+The sixth, and last, prompt is to choose if and how the user wants the decoded data to be saved:
 
 ![Data saving prompt](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/DB.png)
 
-![Screenshot of example files created if option 2 is chosen](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/iCloud_Drive.png)
-
-*NOTE:* If the user wants data to be saved in the Notes app (option 1), the shortcuts needs to be run twice for the first time, as the first run will create the note and the second one will start writing data. 
+![Example of the contents of the 'ShorteNB' folder in iCloud Drive](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/iCloud_Drive.png)

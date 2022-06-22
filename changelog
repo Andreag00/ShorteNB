@@ -1,3 +1,5 @@
-Corretto un problema col primo login, riaggiunta la possibilità di salvare i dati decodificati in un file, aggiungendo anche la possibilità di salvare i dati come un JSON.
+Cambiati i menu dello shortcut rendendoli visivamente più belli. 
 
-DISCLAIMER: questa versione è una beta e potrebbe presentare bug oltre a non essere completa.
+NOTA: Questa dovrebbe essere l'ultima beta della v1.0 al netto di bug.
+
+DISCLAIMER: questa versione è una beta e potrebbe presentare bug.
