@@ -1,3 +1,3 @@
-Riscritta la logica per calcolare CID, eNB e banda in JavaScript.
+Corretto un problema col primo login, riaggiunta la possibilità di salvare i dati decodificati in un file, aggiungendo anche la possibilità di salvare i dati come un JSON.
 
 DISCLAIMER: questa versione è una beta e potrebbe presentare bug oltre a non essere completa.
