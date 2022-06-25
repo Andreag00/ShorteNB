@@ -1,3 +1,6 @@
-Aggiunta la possibilità di aprire la mappa centrata nella propria posizione invece che aprire per forza la pagina con le informazioni della BTS.
+Introdotta l'integrazione con le API di LTE Italy per mostrare dati aggiuntivi sulla BTS a cui si è collegati 
+!!Lo shortcut necessita di Scriptable per funzionare!! Al primo setup verrà richiesta l'installazione dell'app.
 
-Added the possibility to open LTE Italy's map centered in the user's position instead of forcibly opening the BTS's info page.
+Oltre all'integrazione con LTE Italy la versione 1.0 introduce la possibilità di salvare i dati in un JSON, menu più esteticamente accettabili, un nuovo metodo di setup dello shortcut che ora non richiede di reimpostare tutto a ogni aggiornamento e una totale riscrittura del codice, usando JavaScript dove possibile.
+
+N.B.: Questa versione e quelle precedenti sono state in testing per vari giorni e in quest'ultima non sono stati trovati bug da me o dai beta testers, in caso di problemi scrivetemi su Telegram (@andreag00).
