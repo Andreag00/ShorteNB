@@ -22,16 +22,18 @@ if (eNB >= 10000 && eNB <= 99999) {
     actMNC = 22210;
 } else if (eNB >= 100000 && eNB <= 999999) {
     if (MNC1 == 22288 || MNC2 == 22288) {
-        actMNC = 22288
+        actMNC = 22288;
         if (eNB >= 502000 && Math.floor(eNB/1000) % 2 != 0) {
-            eNB -= 401000
+            eNB -= 401000;
+        } else if (eNB >= 502000) {
+            eNB -= 400000;
         } else if (Math.floor(eNB/1000) % 2 != 0) {
             eNB -= 1000;
         }
         // WindTre
         band = [3,20,7,1,38][~~(CID / 6)];
     } else {
-        actMNC = 2221
+        actMNC = 2221;
         // Tim
         band = [,,7,1,3,,20][~~(CID / 10)];
     }
