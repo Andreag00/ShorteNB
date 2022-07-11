@@ -1,1 +1,3 @@
-Corretta una mia dimenticanza per la correzione dei nodi secondari W3.
+Aggiunto supporto ai CID della B28 Vodafone, corretto un bug col RAN Sharing di iliad. 
+
+Se usate lo Shortcut per iliad cancellate il file "settings.json" nella cartella "ShorteNB" su iCloud Drive e rieseguite il primo setup.
