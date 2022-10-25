@@ -1,3 +1,1 @@
-Aggiunto supporto ai CID della B28 Vodafone, corretto un bug col RAN Sharing di iliad. 
-
-Se usate lo Shortcut per iliad cancellate il file "settings.json" nella cartella "ShorteNB" su iCloud Drive e rieseguite il primo setup.
+Corretto un errore con l'apertura della mappa nella posizione dell'utente e cambiata un'azione nel primo setup
