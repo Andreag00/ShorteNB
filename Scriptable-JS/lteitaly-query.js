@@ -1,6 +1,6 @@
 // Variable Declaration
 
-var cookies = Keychain.get("cookie")
+var cookies = Keychain.get("cookie");
 var newcookies = ""
 
 // Function definition
@@ -25,9 +25,11 @@ for (const cookie of req2.response.cookies) {
 Keychain.remove("cookie");
 Keychain.set("cookie",newcookies);
 
-// Check response, if 403 login again in the next action, otherwise process data returned by LTE Italy and return it to ShorteNB
+// Check if StatusCode is 403, if 403 login again in the next action, otherwise process data returned by LTE Italy and return it to ShorteNB
 
-if (json != -1) { 
+let statusCode = req2.response['statusCode'];
+
+if (statusCode == 200) { 
   let Name = json[0]  
   let LTE_Bands = json[1].split("~").filter(it => it).join(", ")  
   let NR_Bands = json[2].split("~").filter(it => it).join(", ") 
@@ -41,29 +43,6 @@ if (json != -1) {
   return{Name,LTE_Bands,NR_Bands,NR_Info}; 
   Script.complete();
 } else {
-  let newLogin = 1;
-  let user = "username";
-  let password = "password";
-  let cookies = "";
-
-  // Remove login cookies, then generate new ones
-
-  Keychain.remove("cookie");
-
-  let req = new Request("https://lteitaly.it/api/AV1.php");
-  req.method = "POST";
-  req.headers = { "Content-Type": "application/json;charset=UTF-8" };
-  req.body = "[\"login\",\""+ user +"\",\"" + password + "\",true]";
-  let res = await req.load();
-  req.response.cookies;
-
-  for (const cookie of req.response.cookies) {
-      cookies += cookie.name + "=" + cookie.value + "; ";
-  }
-
-  Keychain.set("cookie", cookies);
-  return{newLogin};
+  return{statusCode};
   Script.complete();
 }
-
-Script.complete();
