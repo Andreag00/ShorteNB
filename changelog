@@ -1,1 +1,1 @@
-Corretto un errore con l'apertura della mappa nella posizione dell'utente e cambiata un'azione nel primo setup
+Corretto un problema nell'error handling che richiedeva l'esecuzione manuale di un comando in Scriptable per effettuare nuovamente il login alla scadenza dei cookie.
