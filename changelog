@@ -1,1 +1,1 @@
-Corretto un errore con l'apertura della mappa nella posizione dell'utente e cambiata un'azione nel primo setup
+Corretto l'error handling in caso di cookie scaduti e cambiato il metodo in cui vengono salvate le impostazioni in modo da non salvarle in chiaro. È possibile cancellare il file settings.json da iCloud Drive.

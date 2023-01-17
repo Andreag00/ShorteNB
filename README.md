@@ -36,8 +36,6 @@ I due prompt successivi richiedono l'inserimento di username e password del prop
 ![Inserimento username](https://raw.githubusercontent.com/Andreag00/ShorteNB/main/README-Images/Username.png)
 ![Inserimento password](https://raw.githubusercontent.com/Andreag00/ShorteNB/main/README-Images/Password.png)
 
-**DISCLAIMER: La sicurezza della propria password potrebbe essere compromessa in quanto viene salvata in chiaro all'interno dell'app Shortcuts. Le credenziali non lasceranno mai il dispositivo dell'utente, che si prende la responsabilità di mantenere sicure le proprie credenziali. Inoltre questo Shortcut non è in alcun modo affiliato a LTE Italy.**
-
 Il prompt successivo permette di scegliere l'operatore della SIM principale dell'utente:
 
 ![Scelta operatore SIM principale](https://raw.githubusercontent.com/Andreag00/ShorteNB/main/README-Images/MNC1.png)
@@ -86,8 +84,6 @@ It will then ask to insert the user's LTE Italy username and password:
 
 ![Username prompt](https://raw.githubusercontent.com/Andreag00/ShorteNB/main/README-Images/Username.png)
 ![Password prompt](https://raw.githubusercontent.com/Andreag00/ShorteNB/main/README-Images/Password.png)
-
-**DISCLAIMER: The safety of the user's username and password may be compromised because they're saved unencrypted in the Shortcuts app. Credentials will never leave the user's device, the user is responsible for the safety of these credentials. This shortcut is not in any way affiliated with LTE Italy.**
 
 The next prompt asks the user to choose their main SIM's operator:
 

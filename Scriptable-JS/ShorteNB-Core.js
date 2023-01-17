@@ -11,7 +11,7 @@ var eNB, acteNB, CID, band, actMNC, cookies = "";
 // eNB/CID Calculation
 
 eNB = Math.floor(CellID / 256);
-acteNB = eNB
+acteNB = eNB;
 CID = CellID % 256;
 
 // Band Determination 
@@ -43,16 +43,14 @@ if (eNB >= 10000 && eNB <= 99999) {
     band = [,,1,,"7 COVID",,7,28,3][~~(CID / 10)];
 }
 
-var bool = Keychain.contains("cookie");
-
 // Check if login has already been done, if not login
 
-if (bool == false) {
+if (Keychain.contains("cookie") == false) {
   let req = new Request("https://lteitaly.it/api/AV1.php");
   req.method = "POST";
   req.headers = { "Content-Type": "application/json;charset=UTF-8" };
   req.body = "[\"login\",\""+ user +"\",\"" + password + "\",true]";
-  let res = await req.load();
+  await req.load();
   req.response.cookies;
 
   // Process and Save Cookie
