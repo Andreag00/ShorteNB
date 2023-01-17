@@ -1,1 +1,2 @@
 Corretto l'error handling in caso di cookie scaduti e cambiato il metodo in cui vengono salvate le impostazioni in modo da non salvarle in chiaro. È possibile cancellare il file settings.json da iCloud Drive.
+Sarà necessario effettuare nuovamente il primo setup dello Shortcut.
