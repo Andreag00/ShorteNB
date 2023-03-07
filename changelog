@@ -1,2 +1,2 @@
-Corretto l'error handling in caso di cookie scaduti e cambiato il metodo in cui vengono salvate le impostazioni in modo da non salvarle in chiaro. È possibile cancellare il file settings.json da iCloud Drive.
-Sarà necessario effettuare nuovamente il primo setup dello Shortcut.
+Modifica minore al salvataggio delle credenziali. Sarà necessario effettuare nuovamente il primo setup dello Shortcut (giuro che sarà l'ultima volta) o eseguire Keychain.set("setup","true") dentro Scriptable.
+Aggiunti i CID della B28 e i CID 1xx di Tim, modificato l'ordine di esecuzione per rendere più efficiente l'esecuzione quando il GPS fa fatica a localizzare il telefono, aggiunta l'indicazione dell'MNO rilevato nella notifica.
