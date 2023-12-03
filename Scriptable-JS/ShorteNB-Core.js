@@ -6,7 +6,7 @@ let MNC2 = MNC2;
 let user = "username";
 let password = "password";
 
-var eNB, acteNB, CID, band, actMNC, cookies, MNO = "";
+var eNB, acteNB, CID, band, actMNC, cookies = "", MNO = "";
 
 // eNB/CID Calculation
 
@@ -49,7 +49,7 @@ if (eNB >= 10000 && eNB <= 99999) {
 
 // Check if login has already been done, if not login
 
-if (Keychain.contains("cookie") == false) {
+if (Keychain.contains("cookie") == false || Keychain.get("cookie").startsWith("undefined")) {
   let req = new Request("https://lteitaly.it/api/AV1.php");
   req.method = "POST";
   req.headers = { "Content-Type": "application/json;charset=UTF-8" };
