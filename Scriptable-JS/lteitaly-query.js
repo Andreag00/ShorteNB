@@ -32,6 +32,7 @@ async function eNBRequest(savedcookie) {
   let NR_Bands = json[2].split("~").filter(it => it).join(", ")  
   let associateIndex =  ["- AAU mmWave","- TDD Sub-6GHz","- FDD","- DSS","- Altro"]; 
   let associateDigit = ["No","","Passivo","Intersite","-","Ignoto"]; 
+  let associateDigit = ["No","","Passivo","Intersite","-","Ignoto"]; 
   let NR_Info = [...json[3]].map((it, index) => [associateIndex[index], associateDigit[it]]).filter(it => it[1] !== 'No').map(it => it.join(" ")).join("\n") 
   return[Name,LTE_Bands,NR_Bands,NR_Info];
 }
