@@ -1,6 +1,9 @@
-Hotfix<br><br>
+Release v1.2:
 
-Modifica minore al salvataggio delle credenziali. Sarà necessario effettuare nuovamente il primo setup dello Shortcut (giuro che sarà l'ultima volta) o eseguire Keychain.set("setup","true") dentro Scriptable.<br><br>
-
-Aggiunti i CID della B28 e i CID 1xx di Tim, modificato l'ordine di esecuzione per rendere più efficiente l'esecuzione quando il GPS fa fatica a localizzare il telefono, aggiunta l'indicazione dell'MNO rilevato nella notifica.
+- Aggiunto il supporto ai CID ZefiroNet (B1+, B3+, B7+, B28).
+- Fixato bug primo login col cookie che risultava malformato
+- Rimossa la possibilità di salvare i dati geolocalizzati
+- Nuova UI per il primo login
+- Nuova pagina di avviso di disponibilità di un aggiornamento
+- Codice reso più lineare.
 
