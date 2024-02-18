@@ -45,7 +45,7 @@ Il prompt successivo richiede di indicare l'operatore della SIM principale dell'
 
 ![Scelta operatore SIM principale](README-Images\MNC1.png)
 
-In maniera simile alla richiesta precedente, l'utente deve ora indicare l'operatore della SIM secondaria dell'utente:
+In maniera simile alla richiesta precedente, l'utente deve ora indicare l'operatore della propria SIM secondaria, se presente:
 
 ![Scelta operatore SIM secondaria](README-Images\MNC2.png)
  
@@ -108,7 +108,7 @@ The next prompt asks the user to choose their main SIM's operator:
 
 ![Main SIM prompt](README-Images\MNC1.png)
 
-The fifth prompt, similarly to the previous one, is used to choose the user's secondary SIM's operator:
+The fifth prompt, similarly to the previous one, is used to choose the user's secondary SIM's operator, if present:
 
 ![Secondary SIM prompt](README-Images\MNC2.png)
 
