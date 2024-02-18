@@ -61,7 +61,6 @@ if (Keychain.contains("cookie") == false || Keychain.get("cookie").startsWith("u
   req.headers = { "Content-Type": "application/json;charset=UTF-8" };
   req.body = "[\"login\",\""+ user +"\",\"" + password + "\",true]";
   await req.load();
-  await req.load();
   req.response.cookies;
 
   // Process and Save Cookie
@@ -75,7 +74,6 @@ if (Keychain.contains("cookie") == false || Keychain.get("cookie").startsWith("u
 
 // Return data required by ShorteNB
 
-return{eNB, acteNB, CID, band, actMNC, MNO};
 return{eNB, acteNB, CID, band, actMNC, MNO};
 
 Script.complete();
