@@ -1,13 +1,13 @@
 // Variable Declaration
 
 let CellID = "CellID";
-CellID = parseInt(CellID.split('.').join("")) // Removes dots from any CellID hand-calculated on iOS calculator
+CellID = parseInt(CellID.split('.').join("")) //Removed dots from any CellID hand-calculated on iOS calculator, kinda useless but still
 let MNC1 = MNC1;
 let MNC2 = MNC2;
 let user = "username";
 let password = "password";
 
-var eNB, acteNB, CID, band, actMNC, cookies = "";
+var eNB, acteNB, CID, band, actMNC, cookies = "", MNO = "";
 
 // eNB/CID Calculation
 
@@ -54,12 +54,12 @@ switch(eNB.toString().length) {
 
 // Check if login has not already been done or if the cookie is malformed.  If either of the two conditions is true, login again to fix the issue
 
-if (bool == false) {
+if (Keychain.contains("cookie") == false || Keychain.get("cookie").startsWith("undefined")) {
   let req = new Request("https://lteitaly.it/api/AV1.php");
   req.method = "POST";
   req.headers = { "Content-Type": "application/json;charset=UTF-8" };
   req.body = "[\"login\",\""+ user +"\",\"" + password + "\",true]";
-  let res = await req.load();
+  await req.load();
   req.response.cookies;
 
   // Process and Save Cookie
@@ -73,6 +73,6 @@ if (bool == false) {
 
 // Return data required by ShorteNB
 
-return{eNB, acteNB, CID, band, actMNC};
+return{eNB, acteNB, CID, band, actMNC, MNO};
 
 Script.complete();

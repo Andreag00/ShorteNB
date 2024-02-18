@@ -4,14 +4,16 @@
 
 A shortcut by @andreag00 on [Telegram](https://t.me/andreag00)/ag23900 on [Fibra Click](https://forum.fibra.click/u/ag23900)
 
-Big thanks to [Abdel](https://github.com/ADeltaX) and [Simone](https://github.com/SimoneBortolin) for help with JavaScript, Marco for creating all the logos in the appropriate dimensions.
+Big thanks to [Abdel](https://github.com/ADeltaX) and [Simone](https://github.com/SimoneBortolin) for help with the Shortcut's JavaScript code, MarcoGiaco for creating all the logos in the appropriate dimensions.
 
 ## Versione Italiana
 Decodifica facilmente i dati dal CellID che si trova nel FieldTest di Apple (FTMInternal-4) mostrando anche dati sulla BTS a cui si è connessi presi da LTE Italy. **Supporta solo MNO italiani**
 
-![Esempio di notifica generata da ShorteNB](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/Example_Notification.png)
+![Esempio di notifica generata da ShorteNB](README-Images\Example_Notification.png)
 
-Lo shortcut va eseguito dopo aver copiato il CellID dal FieldTest e decodifica eNB, CID e banda (se disponibile) dal CellID. Oltre a decodificare questi dati, esce un prompt per aprire velocemente la pagina con le info sulla BTS o la mappa centrata sulla posizione dell'utente su [LTE Italy](https://lteitaly.it) e salva i dati decodificati, georeferenziati, in una nota nell'app Note o in un file .txt su iCloud Drive. Inoltre nella notifica vengono mostrati dei dati aggiuntivi: nome, bande 4G e 5G e info sui tipi di 5G attivi della BTS a cui l'utente è collegato.
+Lo shortcut va eseguito dopo aver copiato il CellID dal FieldTest e decodifica eNB, CID e banda (se disponibile) dal CellID. 
+Oltre a decodificare questi dati, all'utente viene presentato un prompt per aprire velocemente la pagina di LTE Italy contenente tutte le informazioni sulla BTS o, in alternativa, per aprire la mappa di LTE Italy centrata sulla posizione GPS dell'utente. 
+Inoltre, nella notifica vengono mostrati dei dati aggiuntivi sulla BTS a cui l'utente è collegato, quali nome, bande attive (sia in 4G che in 5G) e le caratteristiche del 5G attivo sull'eNB in questione.
 
 L'ideale è usarlo in concomitanza con [questo shortcut](https://github.com/Andreag00/FTM-Opener), che apre il FieldTest **se aggiunto alla Home Screen**.
 
@@ -21,7 +23,7 @@ L'ideale è usarlo in concomitanza con [questo shortcut](https://github.com/Andr
 
 **Perché ShorteNB funzioni è necessario installare [Scriptable](https://apps.apple.com/it/app/scriptable/id1405459188).**
 
-Per importare lo shortcut è sufficiente scaricare e aprire il file .shortcut, oppure aprire il link iCloud presente nel file "link".
+Per importare lo shortcut è sufficiente scaricare e aprire il [file .shortcut](ShorteNB.shortcut), oppure aprire il link iCloud presente nel [file "link"](link).
 
 ### Come effettuare il primo setup di ShorteNB
 
@@ -29,42 +31,54 @@ In concomitanza alla prima esecuzione dello shortcut, ShorteNB richiede l'impost
 
 Innanzitutto, ShorteNB chiede se Scriptable è stata installata, in quanto è un'app essenziale perché lo shortcut possa funzionare:
 
-![Scriptable](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/Scriptable.png)
+![Scriptable](README-Images\Scriptable.png)
 
-I due prompt successivi richiedono l'inserimento di username e password del proprio account di LTE Italy per permettere di mostrare i dati aggiuntivi ottenuti dalle API di LTE Italy:
+Se l'app non è ancora stata installata, si apre la pagina dell'App Store per installarla, lasciando ShorteNB in esecuzione in background. Una volta terminata l'installazione e dopo essere tornati sull'app Shortcuts, proseguirà il setup. 
 
-![Inserimento username](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/Username.png)
-![Inserimento password](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/Password.png)
+Dopo il primo passo, si aprirà automaticamente Scriptable, che presenterà un prompt per inserire username e password di LTE Italy al fine di effettuare il login, poichè le loro API richiedono autenticazione:
 
-**DISCLAIMER: La sicurezza della propria password potrebbe essere compromessa in quanto viene salvata in chiaro all'interno dell'app Shortcuts. Le credenziali non lasceranno mai il dispositivo dell'utente, che si prende la responsabilità di mantenere sicure le proprie credenziali. Inoltre questo Shortcut non è in alcun modo affiliato a LTE Italy.**
+![Login](README-Images\Login.png)
 
-Il prompt successivo permette di scegliere l'operatore della SIM principale dell'utente:
+**DISCLAIMER: Le credenziali vengono salvate all'interno del Keychain di Scriptable e lasciano il dispositivo solo per effettuare il login su LTE Italy, a cui vengono inviate in modo sicuro. Lo sviluppatore declina ogni responsabilità in caso di compromissione di dati personali.**
 
-![Scelta operatore SIM principale](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/MNC1.png)
+Il prompt successivo richiede di indicare l'operatore della SIM principale dell'utente:
 
-Il quinto prompt, molto similmente al precedente, permette di scegliere l'operatore della SIM secondaria dell'utente:
+![Scelta operatore SIM principale](README-Images\MNC1.png)
 
-![Scelta operatore SIM secondaria](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/MNC2.png)
+In maniera simile alla richiesta precedente, l'utente deve ora indicare l'operatore della SIM secondaria dell'utente:
 
-**WARNING:** Se l'utente sceglie iliad come operatore della SIM principale, l'operatore della SIM secondaria viene automaticamente impostato come WindTre, in modo che lo shortcut funzioni correttamente con il RAN Sharing su WindTre. 
-**WARNING:** La combinazione di operatori Tim+WindTre non è supportata in quanto entrambi usano eNB a 6 cifre e lo shortcut non può distinguere tra i due operatori, questa incompatibilità si riflette sul menu della scelta dell'operatore della SIM secondaria, che non permette di effettuare questa scelta.
+![Scelta operatore SIM secondaria](README-Images\MNC2.png)
+ 
+**WARNING:** La combinazione di operatori Tim+WindTre non è supportata in quanto entrambi usano eNB a 6 cifre e lo shortcut non può distinguere tra i due operatori. 
+Questa incompatibilità si riflette sul menu della scelta dell'operatore della SIM secondaria, che non permette di selezionare tale combinazione.
 
-Il quinto, e ultimo, prompt permette di scegliere se e come l'utente vuole che i dati che ShorteNB processa vengano salvati:
+Dopo il primo setup, anche in caso di aggiornamento, non ci sarà bisogno di effettuare nuovamente il setup, in quanto vengono salvate all'interno del Keychain di Scriptable.
 
-![Scelta metodo di salvataggio](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/DB.png)
+Per poter effettuare nuovamente il setup, è necessario eseguire il seguente comando all'interno di Scriptable:
 
-![Esempio di file generati nella cartella 'ShorteNB' su iCloud Drive](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/iCloud_Drive.png)
+```
+Keychain.set("setup","false") # Forza un nuovo primo setup di ShorteNB
+```
 
-Dopo il primo setup, anche in caso di aggiornamento, non ci sarà bisogno di reinserire queste scelte, in quanto vengono salvate su iCloud Drive e non vengono più modificate dopo il primo setup. In caso si volessero cambiare queste scelte è necessario cancellare il file "settings.json" nella cartella di ShorteNB presente su iCloud Drive.
+In alternativa è possibile modificare singolarmente le impostazioni di ShorteNB coi seguenti comandi:
+
+```
+Keychain.set("username"."abc123") # Inserire il proprio username al posto di abc123
+Keychain.set("password"."abc123") # Inserire la propria password al posto di abc123
+Keychain.set("MNC1"."222xx") # Inserire il Mobile Network Code (MNC) della SIM principale al posto di xx
+Keychain.set("MNC2"."222yy") # Inserire il Mobile Network Code (MNC) della SIM secondaria al posto di yy
+Keychain.remove("cookie") # Elimina i cookie che vengono salvati per forzare un nuovo login
+```
 
 ## English Version
 Easily decode data out of the CellID found in Apple's FTMInternal-4 together with extra data gathered from LTE Italy'APIs. **Italian MNOs only**
 
-![Example notification generated by ShorteNB](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/Example_Notification.png)
+![Example notification generated by ShorteNB](README-Images\Example_Notification.png)
 
-Provided with the CellID as input from the clipboard, the shortcut decodes data out of it showing it in an alert together with extra data gathered from [LTE Italy](https://lteitaly.it)'s APIs. It also makes it easy to open [LTE Italy](https://lteitaly.it)'s map or the BTS’s info page on [LTE Italy](https://lteitaly.it) and saves geotagged data to a note or to a .txt file to be uploaded on iCloud Drive.
+Provided with the CellID as input from the clipboard, the shortcut decodes data out of it showing it in an alert together with extra data gathered from [LTE Italy](https://lteitaly.it)'s APIs. 
+It also makes it easy to open [LTE Italy](https://lteitaly.it)'s map or the BTS’s info page.
 
-Works great in conjunction with [this shortcut](https://github.com/Andreag00/FTM-Opener) that opens FTMInternal-4 when added to the Home Screen.
+Works great in conjunction with [this shortcut](https://github.com/Andreag00/FTM-Opener), as it opens FTMInternal-4, but only when ran from the Home Screen.
 
 ### How to import into Shortcuts
 
@@ -72,7 +86,7 @@ Works great in conjunction with [this shortcut](https://github.com/Andreag00/FTM
 
 **For ShorteNB to work, [Scriptable](https://apps.apple.com/it/app/scriptable/id1405459188?l=en) is required.**
 
-To import the shortcut, simply download the .shortcut file or open the link in the "link" file.
+To import the shortcut, simply download the [.shortcut file](ShorteNB.shortcut) or open the link in the ["link" file](link).
 
 ### How to setup the shortcut
 
@@ -80,28 +94,40 @@ When executed for the very first time, the shortcut will prompt the user to inpu
 
 First of all, ShorteNB will ask if Scriptable has been installed, as it's a required app for the shortcut to work at all:
 
-![Scriptable](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/Scriptable.png)
+![Scriptable](README-Images\Scriptable.png)
 
-It will then ask to insert the user's LTE Italy username and password:
+If the user has not yet installed the app, the Shortcut will automatically open Scriptable's App Store page so that the user can install it and leave ShorteNB running in the background. Once the app has been installed the user shall return to Shortcuts to finish the setup.
 
-![Username prompt](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/Username.png)
-![Password prompt](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/Password.png)
+After this is done, Scriptable will open to present a prompt to insert the user's LTE Italy credentials, to be able to use their APIs which require authentication:
 
-**DISCLAIMER: The safety of the user's username and password may be compromised because they're saved unencrypted in the Shortcuts app. Credentials will never leave the user's device, the user is responsible for the safety of these credentials. This shortcut is not in any way affiliated with LTE Italy.**
+![Login prompt](README-Images\Login.png)
+
+**DISCLAIMER: Credentials are stored in Scriptable's Keychain and leave the device only to login into LTE Italy in a secure way. The developer declines any responsibility in case of any violation of private data.**
 
 The next prompt asks the user to choose their main SIM's operator:
 
-![Main SIM prompt](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/MNC1.png)
+![Main SIM prompt](README-Images\MNC1.png)
 
 The fifth prompt, similarly to the previous one, is used to choose the user's secondary SIM's operator:
 
-![Secondary SIM prompt](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/MNC2.png)
+![Secondary SIM prompt](README-Images\MNC2.png)
 
-**WARNING:** If iliad is chosen as the main SIM's operator, the shortcut will automatically set the secondary SIM's operator as WindTre to show correct info when the user is connected to WindTre's Radio Access Network via RAN sharing.
 **WARNING:** As having Tim and WindTre as operators is not supported (because both user 6-number eNBs and there is no way to distinguish them), if either of them is chosen as the main SIM's operator, the prompt for the secondary SIM will not allow the user to choose the other one.
 
-The sixth, and last, prompt is to choose if and how the user wants the decoded data to be saved:
+After the first setup is done, there's never gonna be any need to go through it again, as all settings, just like the user's credentials, are saved in Scriptable's Keychain. This means that they persist even through any update to the Shortcut.
 
-![Data saving prompt](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/DB.png)
+If the user ever needs to go through the first setup again, it can do so by launching the following command in Scriptable:
 
-![Example of the contents of the 'ShorteNB' folder in iCloud Drive](https://raw.githubusercontent.com/Andreag00/ShorteNB/dev/README-Images/iCloud_Drive.png)
+```
+Keychain.set("setup","false") # Forces a new execution of ShorteNB's first setup
+```
+
+Alternatively, if the user wants to change settings granularly, it can do so by running the following commands:
+
+```
+Keychain.set("username"."abc123") # Insert the username in place of abc123
+Keychain.set("password"."abc123") # Insert the password in place of abc123
+Keychain.set("MNC1"."222xx") # Insert the main SIM's Mobile Network Code (MNC) in place of xx
+Keychain.set("MNC2"."222yy") # Insert the secondary SIM's Mobile Network Code (MNC) in place of yy
+Keychain.remove("cookie") # Resets the saved cookies to forse a new login
+```

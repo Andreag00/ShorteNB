@@ -15,7 +15,7 @@ async function eNBRequest(savedcookie) {
   let req = new Request("https://lteitaly.it/internal/v3/api.php"); 
   req.method = "POST"; 
   req.headers = { "Content-Type": "application/json;charset=UTF-8", "Cookie": savedcookie, "Referer": "https://lteitaly.it" }; 
-  req.body = "[\"databyenb3\",\"actMNC\",\"eNB\"]";
+  req.body = "[\"databyenb3\",\"actMNC\",\"acteNB\"]";
   let json = await req.loadJSON(); 
   
   // Process and Update Cookie
@@ -31,7 +31,7 @@ async function eNBRequest(savedcookie) {
   let LTE_Bands = json[1].split("~").filter(it => it).join(", ")  
   let NR_Bands = json[2].split("~").filter(it => it).join(", ")  
   let associateIndex =  ["- AAU mmWave","- TDD Sub-6GHz","- FDD","- DSS","- Altro"]; 
-  let associateDigit = ["No","","Passivo","Intersite","Autorizzato","Ignoto"]; 
+  let associateDigit = ["No","","Passivo","Intersite","-","Ignoto"]; 
   let NR_Info = [...json[3]].map((it, index) => [associateIndex[index], associateDigit[it]]).filter(it => it[1] !== 'No').map(it => it.join(" ")).join("\n") 
   return[Name,LTE_Bands,NR_Bands,NR_Info];
 }

@@ -1,7 +1,7 @@
 // Create alert, set title and message
 const loginAlert = new Alert();
 loginAlert.title = "🔐 LTE Italy Log In 🔐";
-loginAlert.message = "Inserire username e password di LTE Italy.\n\n⚠️ Le credenziali vengono salvate solo sul proprio dispositivo.\nLo sviluppatore declina ogni responsabilità in caso di compromissione di dati personali. ⚠️";
+loginAlert.message = "Inserire username e password di LTE Italy.\n\n⚠️ Le credenziali vengono inviate solo a LTE Italy in modo sicuro e sono salvate solo sul proprio dispositivo.\nLo sviluppatore declina ogni responsabilità in caso di compromissione di dati personali. ⚠️";
 
 // Add text input fields
 const usernameField = loginAlert.addTextField("Username");
